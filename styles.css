@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@400;900&display=swap');
+
+:root {
+    --orange-color: #DA722C;
+    --blue-color: #057ADA;
+    --white-color: #E8F7FB;
+    --darkBlue-color: #023047;
+    --black-color: #070917;
+    --purple-color: #6F7DFB;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ================HEADER================ */
+header {
+    background: linear-gradient(180deg, #6F7DFB 0%, #26308C 100%);
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 3.75rem;
+}
+
+.nav-wrapper h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.25rem;
+    font-weight: 900;
+    color: #FFF;
+}
+
+.nav-list {
+    display: none;
+    flex-basis: 100%;
+    list-style: none;
+    text-align: center;
+}
+
+.nav-list li a {
+    display: inline-block;
+    margin-left: 2.75rem;
+    text-decoration: none;
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 1rem;
+}
+
+.enrol {
+    padding: 1rem 2rem;
+    background-color: var(--darkBlue-color);
+    font-size: 18px;
+    border-radius: 24px;
+}
+
+.menu-checkbox:checked ~ .nav-list {
+    display: block;
+}
+
+.menu-checkbox {
+    display: none;
+}
+
+.menu-toggle {
+    font-size: 40px;
+    color: #FFF;
+}
+
+/* ================MEDIA QUERIES================ */
+@media  screen and (min-width: 60em) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav-list {
+        display: block;
+        flex-basis: auto;
+    }
+
+    .nav-list li {
+        display: inline-block;
+    }
+}
